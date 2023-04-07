@@ -1,0 +1,87 @@
+Source Code For Student Management Application
+Section 16, Lecture 81
+//Controller:
+
+package sample;
+
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
+public class Controller {
+
+    public TextField tname;
+    public TextField tid;
+    public TextField tmarks;
+    public TextField tcontact;
+
+    public TextArea texta;
+
+    public void buttonclicked()
+    {
+
+        texta.appendText(tname.getText()+"\t"+tid.getText()+"\t"+tmarks.getText()+"\t"+tcontact.getText()+"\n");
+
+    }
+
+}
+//Main.java
+
+package sample;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 500, 500));
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
+//sample.fxml
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <Label layoutX="101.0" layoutY="92.0" text="Name" />
+            <Label layoutX="101.0" layoutY="116.0" text="ID" />
+            <Label layoutX="101.0" layoutY="143.0" text="Marks" />
+            <Label layoutX="101.0" layoutY="171.0" text="Contact" />
+            <TextField fx:id="tname" layoutX="143.0" layoutY="88.0" />
+            <TextField fx:id="tid" layoutX="143.0" layoutY="112.0" />
+            <TextField fx:id="tmarks" layoutX="143.0" layoutY="139.0" />
+            <TextField fx:id="tcontact" layoutX="143.0" layoutY="167.0" />
+            <TextArea fx:id="texta" layoutX="27.0" layoutY="250.0" prefHeight="200.0" prefWidth="442.0" />
+            <Button layoutX="250.0" layoutY="204.0" mnemonicParsing="false" onAction="#buttonclicked" text="Add" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

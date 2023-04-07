@@ -1,0 +1,18 @@
+Notes For Section -2
+Section 2, Lecture 10
+Data types and variables in java 
+
+
+Variables are the reserved memory locations used to store some values. 
+
+ Variables are used to store data Based upon the type of data the variable has a type which is called as the data type.
+
+For eg: If we want to store an integer value in a variable we use the data type integer or int for that particular variable here are some of the data types: 
+
+ 1) int: used to store integer values. Example: int a=10; 
+
+ 2) float: used to store decimal numbers. Example: float a= 211.5;
+
+ 3)Boolean: It can store information about being true or false Example: boolean a= true; or boolean a= false; 
+
+4)char: char is used to store characters in a variable. for example if you want to store a particular character such as R into a variable you could type in char a='R';

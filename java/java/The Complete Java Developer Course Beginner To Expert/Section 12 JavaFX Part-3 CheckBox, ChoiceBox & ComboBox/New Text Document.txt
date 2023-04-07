@@ -1,0 +1,77 @@
+Source Code For To Do List Application
+Section 18, Lecture 88
+//controller.java
+package sample;
+
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
+public class Controller {
+
+    public DatePicker datepick;
+    public TextField task;
+    public TextArea alltask;
+
+    public void buttonclicked()
+    {
+
+        alltask.appendText(""+datepick.getValue()+"\t"+task.getText()+"\n");
+    }
+
+}
+
+//Main.java
+package sample;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
+//sample.fxml
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <DatePicker fx:id="datepick" layoutX="14.0" layoutY="59.0" />
+            <TextField fx:id="task" layoutX="196.0" layoutY="59.0" prefHeight="25.0" prefWidth="187.0" />
+            <Button layoutX="400.0" layoutY="59.0" mnemonicParsing="false" onAction="#buttonclicked" text="Add Task" />
+            <TextArea fx:id="alltask" layoutX="14.0" layoutY="136.0" prefHeight="344.0" prefWidth="445.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

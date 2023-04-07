@@ -1,0 +1,123 @@
+Source Code For BMI Application
+Section 17, Lecture 85
+//controller.java
+
+package sample;
+
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+public class Controller {
+
+    public TextField theight;
+    public TextField tweight;
+
+    public Label lbmi;
+    public Label lresult;
+
+    public void buttonclicked()
+    {
+
+        double height;
+        double weight;
+        double bmi;
+
+        String result="";
+
+        height= Double.parseDouble(theight.getText());
+        weight= Double.parseDouble(tweight.getText());
+
+        bmi= height*height;
+        bmi= weight/bmi;
+
+        lbmi.setText("BMI IS:"+bmi);
+
+        if(bmi<18.5){
+
+            result="Under weight";
+
+        }
+        else if(bmi>18.5 && bmi<25){
+
+            result="Normal";
+        }
+        else if(bmi>25){
+
+            result="Over Weight";
+
+        }
+
+        lresult.setText("You are"+result);
+
+    }
+
+}
+//Main.java
+
+package sample;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 500, 500));
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
+Sample.fxml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <Label layoutX="134.0" layoutY="39.0" text="BMI Calculator">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="theight" layoutX="176.0" layoutY="124.0" promptText="Enter height in meters" />
+            <TextField fx:id="tweight" layoutX="176.0" layoutY="166.0" promptText="Enter weight in kgs" />
+            <Button layoutX="251.0" layoutY="225.0" mnemonicParsing="false" onAction="#buttonclicked" text="Show BMI" />
+            <Label fx:id="lbmi" layoutX="98.0" layoutY="301.0" prefHeight="37.0" prefWidth="336.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lresult" layoutX="98.0" layoutY="381.0" prefHeight="37.0" prefWidth="336.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

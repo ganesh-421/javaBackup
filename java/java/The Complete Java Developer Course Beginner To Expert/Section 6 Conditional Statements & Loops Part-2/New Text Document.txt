@@ -1,0 +1,114 @@
+Notes For Section -6
+Section 6, Lecture 31
+NESTED IF STATEMENTS
+Let's say you want to check a condition like if the age of a person is greater than 18.
+In such cases you could simply use an if statement like
+
+ if(age>18).
+
+Now consider if you want to check the age and after checking the age you want to check the gender of a person.
+In order to do that you could write in an if statement after the previous if statement.
+Lets say after checking the age you want to check of the gender of a person is male.
+In such cases you could use nesting of if statements.
+This is how the nesting of if statements should look like:
+
+if(age>18)
+{
+     if(gender="male")
+     {
+    the person is an adult and he is a male
+
+     }
+
+}
+
+This concept is called as nesting because one if statement acts as a nest to other if statement, hence you could place an if statement
+inside other as if it were a nest.
+
+
+
+THE ELSE IF STATEMENT
+The else if statement is used when we actually want to check multiple conditions.
+Here is what an else if statement looks like:
+
+if(name="tom")
+{
+    your name is tom
+}
+else if(name="zac")
+{
+    your name is zac
+}
+else if(name="mark")
+{
+
+    your name is mark
+}
+
+This is how the else if statement can be used with an if statement to check multiple conditions
+
+
+
+CONDITIONAL OPERATORS
+
+
+conditional operators allows us to check a condition in a single line.
+Lets say depending on the persons age, we want to comment something.
+
+
+Here is the code for doing so by using the conditional operators:
+
+
+int age=65;
+ System.out.println(age>60 ? "You are old": "you are young");
+
+Here is some explanation of the conditional operator:
+
+System.out.println(condtion ? "this is what you want to print when condition is true"  :  "this is what you want to print when the condition is false"  );
+
+In conditional operator, we initially specify the condition then in order to perform some action after checking the condition we give a ?and after ? we specify what do we want to print if the condition is true, after that we give a : and after it we specify what needs to be displayed if the condition is false.
+
+
+
+FOR LOOPS
+You might remember from the previous few tutorials that the while loop can be used to loop through the code as many number if times as we want.
+For loop is another type of loop which lets you loop through the code.let us consider you want to loop through the code multiple number of times, then we create a for loop.
+Here is what a for loop looks like:
+
+for(int 1=0;i<5;i++)
+{
+    System.out.println("I love to code");
+}
+
+The for loop consists of three parameters unlike the while loop which had only one parameter which was the condition
+here are the three parameters which a for loop has.
+
+for(initialization;condition_checking;increment_OR_decrement)
+{
+
+}
+
+initialization: This parameter is used to initialize the counter variable which we use ti keep track of the number of times the loop executes.
+
+condition checking: This part is used to the condition so that once the counter reaches a certain value, the loop could be ended.
+
+increment or decrement operation: This is used to either increment the counter value or decrement the counter value.
+
+
+
+
+
+THE DO WHILE LOOP
+The do while loop is a little bit different that the normal while loop,
+
+ here is what a do while loop looks like:
+
+do
+{
+   code
+}while(condition);
+
+Here we could notice that the condition is below the actual loop and there is a reason for that. 
+In case of a do while loop, the loop gets executed first without even checking the condition.
+Once the loop is executed for the first time then the condition is checked and if the condition is true,
+ only then the loop is executed again.

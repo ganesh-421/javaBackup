@@ -1,0 +1,31 @@
+Notes For Section -8
+Section 8, Lecture 47
+CALCULATING LENGTH OF THE STRING
+So, how do we calculate the length of a string
+Lets consider, you have a string which is declared as follows:
+
+String message="Hello There";
+
+Now to calculate the length of this string we simply use the method which is called as length
+Hence first we type in the string name then give a '.' and after it type in length. This is how the code looks like:
+
+message.lenght();
+this line of code should return you the length of any string. now we need to store in this length in some variable so we type in the code as:
+
+int a= message.length();
+
+Now the actual length of the string gets stored in the variable a.
+
+
+
+USING CONCAT TO JOIN TWO STRINGS
+
+
+Lets say you have first name of a person in one string and last name in some other string.
+Now you wish to join the first name and the last name together by using java code.
+This is where the concat method comes in handy.
+Concat method allows us to join two strings. Here is how the code looks like if you wish to join two strings called the first name and the last name.
+
+String fullname= firstname.concat(lastname);
+The above code should join the firstname and the lastname and store them into the String called as the fullname.
+Simple enough!! Right?

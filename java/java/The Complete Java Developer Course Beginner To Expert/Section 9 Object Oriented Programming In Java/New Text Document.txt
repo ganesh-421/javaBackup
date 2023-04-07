@@ -1,0 +1,31 @@
+Notes For Section -9
+Section 9, Lecture 54
+OBJECT ORIENTED PROGRAMMING IN JAVA
+Object:
+An object is a software bundle of related state and behavior.
+ Software objects are often used to model the real-world objects that you find in everyday life.
+In this section we learned how state and behavior are represented within an object, introduced the concept of data encapsulation, and explains the benefits of designing your software in this manner.
+
+Class:
+A class is a blueprint or prototype from which objects are created. 
+This section defines a class that models the state and behavior of a real-world object. It intentionally focuses on the basics,showing how even a simple class can cleanly model state and behavior.
+
+Inheritance:
+Inheritance provides a powerful and natural mechanism for organizing and structuring your software.
+ This section explains how classes inherit state and behavior from their super classes, and explains how to derive one
+ class from another using the simple syntax provided by the Java programming language.
+
+Polymorphism:
+
+When one task is performed by different ways i.e. known as polymorphism. For example: to convince the customer differently, to draw something e.g. shape or rectangle etc.
+In java, we use method overloading and method overriding to achieve polymorphism.
+
+Encapsulation:
+
+Binding (or wrapping) code and data together into a single unit is known as encapsulation. For example: capsule, it is wrapped with different medicines.
+A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+
+Advantage of OOPs over Procedure-oriented programming language
+1)OOPs makes development and maintenance easier where as in Procedure-oriented programming language it is not easy to manage if code grows as project size grows.
+2)OOPs provides data hiding whereas in Procedure-oriented programming language a global data can be accessed from anywhere.
+3)OOPs provides ability to simulate real-world event much more effectively. We can provide the solution of real word problem if we are using the Object-Oriented Programming language.

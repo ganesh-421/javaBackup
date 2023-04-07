@@ -1,0 +1,128 @@
+Notes For Section -5
+Section 5, Lecture 23
+IF STATEMENT
+The if-then statement is the most basic of all the control flow statements.
+It tells your program to execute a certain section of code only if a particular test evaluates to true.
+
+This is how the if statement works:
+
+
+If(condition){
+    If condition is true then execute this code
+}
+else{
+    If condition is not true then execute this code
+
+}
+
+every if statement has a condition associated with it.
+If that particular condition turns out to be true, in that case the code inside the if block is executed
+if the condition turns out to be false, the code inside the else block gets executed.
+
+
+
+LOGICAL OPERATORS
+The && logical operator:
+
+when we need to check two conditions inside an if statement we use the && "AND " logical operator.
+This is how it works
+
+if(condition1 && condition2){
+
+    if both condition1 and condition2 are true then execute this code
+}
+else{
+
+    if either condition1 or condition2 fails then in that case execute this code
+}
+
+Similar to the && logical operator we have another logical operator which is called as the "OR " logical operator.
+The OR logical operator is represented by  "||".
+
+When we want o check if either of the two conditions is true, in that case we use the OR logical operator.
+This is how it works:
+
+if(condition1 || condition2){
+
+    if either condition1 or condition2 is true then execture this code
+}
+else{
+    if both condition1 and condition2 are false then execute this code
+
+}
+ 
+
+SWITCH STATEMENTS OR SWITCH CASES
+switch allows us to make decisions depending upon the different cases
+here is how the switch case looks like:
+
+switch(parameter to be considered for case)
+{
+
+    case a:  If the paramater is equall to a then execute this code
+        break;
+    
+    case b:  If the paramater is equall to b then execute this code
+        break;
+
+      case c:  If the paramater is equall to c then execute this code
+        break;
+}
+
+Now depending upon the parameter value a particular case is selected, for example lets say the parameter value is a.
+In that case the code written in the case a block gets executed.
+
+Remember, the break is added in each case so as to end the statement once the code in a case is executed.
+Switch case allows us to check for multiple conditions in a program so that depending upon that we could execute certain lines of code.
+
+
+
+WHILE LOOP
+Let us say you want to display a message.
+For that you could simply type in the code as
+
+    System.out.println("I love to code");
+
+easy enough?
+
+Now lets say you absolutely love coding and hence want to display this message 5 times, in such cases you could write the code as:
+
+    System.out.println("I love to code");
+    System.out.println("I love to code");
+    System.out.println("I love to code");
+    System.out.println("I love to code");
+    System.out.println("I love to code");
+
+Wouldn't that be dumb to write the same line of code multiple number of times??
+
+Here is where the while loop comes to our rescue
+While loop allows us to repeat a set of code multiple number of times.
+
+Here is how the structure if a while loop looks like:
+
+while(condition){
+    repeat this code till the condition is true
+}
+Now as we want to repeat the set of code 5 times, we need to have something to keep track of the number of times, hence we introduce a new counter
+variable so we type int counter=0;
+
+now as we want to execute the loop 5 times we simply mention the condition as while(counter <5)
+
+so here is what our code looks like:
+
+while(counter<5)
+{
+    System.out.println("I love to code");
+}
+
+Now as the counter value is 0 initially the code will execute.
+But wait! the counter value forever remains to be 0 and hence the loop will keep on repeating itself infinite number of times.
+in order to solve this problem we simply increment the counter value by 1 every time the loop evexutes so we type in
+
+while(counter<5)
+{
+    System.out.println("I love to code");
+    counter++;
+}
+This additional line of code will increase the counter value by 1 every time the loop executes.
+and when finally the counter value reaches 5, the condition viz counter<5 becomes false and the loop stops to execute.

@@ -1,0 +1,48 @@
+Notes For Section -3
+Section 3, Lecture 14
+Math Operations.
+
+
+Performing mathematical operations:
+
+To add two variables a and b: result= a+b; result is stored in variable result;
+
+To subtract two variables a and b: result= a-b; result is stored in variable result;
+
+To multiply two variables a and b: result= a*b; result is stored in variable result;
+
+To divide two variables a and b: result= a%b; remainder is stored in variable result;
+
+
+
+Increment and decrement operator in java:
+
+Increment operator:
+
+To increment the value of a variable by one we use the increment operator which is ++;
+
+example: 
+
+int a=10;
+
+ a++;  
+
+this line of code will increment the value of a by one
+
+so the new value of a now becomes 11.
+
+
+
+Decrement operator:
+
+To decrement the value of a variable by one we use the increment operator which is ++;
+
+example:
+
+int a=10;
+
+ a--;  
+
+this line of code will decrement the value of a by one
+
+so the new value of a now becomes 9.

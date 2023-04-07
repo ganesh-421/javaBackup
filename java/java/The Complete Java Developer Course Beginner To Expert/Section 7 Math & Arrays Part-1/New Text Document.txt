@@ -1,0 +1,68 @@
+Notes For Section -7
+Section 7, Lecture 41
+MATH CLASS METHODS
+Calculating the absolute value of a number.
+We use a method inside a math class in order to calculate the absolute value of a number.
+
+here is the code to calculate the maximum value:
+Math.abs(-45.7);
+
+
+
+How to round up the numbers to the nearest value?
+For that we use ceil and floor.
+ceil for rounding up the number to higest possible value.
+floor for rounding uo the number to lowest possible value.
+
+this is how the code looks like:
+
+Math.ceil(12.7);
+Math.floor(12.7);
+
+
+
+How to find out the maximum value from two values
+for that we use the max method
+here is how the code looks like:
+Math.max(number1,number2);
+ I.e Math.max(10,20);
+
+Same can be done for finding the minimum value, just replace max by min.
+
+
+
+How to find the square toot of a number?
+use the sqrt(square root) method from the Math class for that purpose.
+Here is how the  code looks like:
+
+Math.sqrt(16);
+
+ARRAYS IN JAVA
+What are arrays
+When you have to hold multiple values of the same time, in those cases we use arrays.
+To understand arrays in a much mode better way, lets go ahead and take an example:
+
+Lets say we want to store a single value in a variable.
+In that case we write the code as:
+int a=10;
+
+now lets say we want to store multiple integer values instead of a single value, in that case we create an array as follows:
+int a[] = new int[10];
+
+Here a is the name of the array, '[]' these square bracket represents that this is an array and not an integer.
+10 is a number which represents the size of the array, i.e it specifies the maximum number of elements which the array can hold.
+
+Now an arrays has multiple positions where we could store our data, there positions are called as the index.
+for example if we wish to store a number at the first position of array, we write in the code as:
+
+a[0]=10;
+ here '0' is the index or the position and 10 is the number which is stored at that particular position.
+here is some more explanation:
+
+a[index]=value_stored_at_that_index_position;
+
+Now as we are done storing one value inside the array, we could go ahead and store another value in the same array,
+but this time at some different position. Hence we type in the code as:
+a[1]=20;
+
+Hence we could keep on storing data into an array.

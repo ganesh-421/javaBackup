@@ -1,0 +1,74 @@
+import java.awt.*;
+public class GridBagLayoutJava extends Frame{
+    Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+    GridBagLayout glayout;
+    GridBagConstraints gconstraints;
+    GridBagLayoutJava(){
+        super("Grid bag layout");
+        glayout = new GridBagLayout();
+        gconstraints = new GridBagConstraints();
+        b1 = new Button("btn1");
+        b2 = new Button("btn2");
+        b3 = new Button("btn3");
+        b4 = new Button("btn4");
+        b5 = new Button("btn5");
+        b6 = new Button("btn6");
+        b7 = new Button("btn7");
+        b8 = new Button("btn8");
+        b9 = new Button("btn9");
+        setSize(1000, 1000);
+        setLayout(glayout);
+        gconstraints.insets = new Insets(15,5,15,5);
+        gconstraints.gridx = 0;
+        gconstraints.gridy = 0;
+        // gconstraints.gridwidth = 3;
+        gconstraints.gridheight = 4;
+        gconstraints.fill = GridBagConstraints.VERTICAL;
+        add(b1, gconstraints); 
+        gconstraints.gridx = 1;
+        gconstraints.gridy = 0;
+        // gconstraints.gridwidth = 3;
+        gconstraints.gridheight = 1; 
+        add(b2, gconstraints);
+        gconstraints.gridx = 2;
+        gconstraints.gridy = 1;
+        // gconstraints.gridwidth = 5;
+        // gconstraints.gridheight = 3;
+        add(b3, gconstraints);  
+        gconstraints.gridx = 3;
+        gconstraints.gridy = 2;
+        // gconstraints.gridwidth = 10;
+        // gconstraints.gridheight = 3;
+        add(b4, gconstraints); 
+        gconstraints.gridx = 4;
+        gconstraints.gridy = 3;
+        add(b5, gconstraints);
+        gconstraints.gridx = 0;
+        gconstraints.gridy = 4;
+        gconstraints.gridwidth = GridBagConstraints.REMAINDER;
+        gconstraints.fill=GridBagConstraints.HORIZONTAL;
+        // gconstraints.gridheight = 10;
+        add(b6, gconstraints);
+        gconstraints.gridx = 0;
+        gconstraints.gridy = 5;
+        gconstraints.gridwidth = GridBagConstraints.REMAINDER;
+        gconstraints.fill=GridBagConstraints.HORIZONTAL;
+        add(b7, gconstraints);
+        gconstraints.gridx = 6;
+        gconstraints.gridy = 0;
+        gconstraints.gridheight = 4;
+        gconstraints.fill=GridBagConstraints.VERTICAL;
+        add(b8, gconstraints);
+        gconstraints.gridx = 7;
+        gconstraints.gridy = 0;
+        gconstraints.gridheight = 4;
+        gconstraints.gridwidth = 4;
+        gconstraints.fill = GridBagConstraints.NONE;
+        gconstraints.anchor = GridBagConstraints.CENTER;
+        add(b9, gconstraints);
+        setVisible(true);  
+    }
+    public static void main(String[] args) {        
+        GridBagLayoutJava gb =  new GridBagLayoutJava();
+    }   
+}

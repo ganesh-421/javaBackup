@@ -1,0 +1,117 @@
+Notes For Section -4
+Section 4, Lecture 18
+USING MULTIPLE CLASSES IN JAVA
+
+
+Yes, it is true you could have multiple classes in a single java program.
+
+To create a new class: 
+
+go to project explorer
+right click on source folder
+select new
+select java class
+name it as mynewclass or any other name which you wish to
+done!! your new class has been created
+you could now create a new method inside your new class
+now to use the method of your new class inside the old class, you need to create an object
+of the new class in the old/previous class.
+
+
+
+Wait!!!! what is object creation??
+
+Whenever we try to use a method inside a class, we have to first create an object of the class.
+
+This is how we create an object of a class
+
+CLASSNAME OBJECTNAME= new CLASSNAME();
+    
+so this is the basic syntax of creating an object of a class
+example: Lets say you have a class called as Student.
+Now in order to create an object of that class we type
+
+Student tom = new Student();
+
+Here tom is the new object created for the class student.
+
+
+
+METHODS WITH PARAMETERS
+
+lets say you have a method which looks something like this:
+
+public void displayMessage(){
+
+    System.out.println("Hello");
+}
+
+Now lets say you want to pass a message i.e your own message to this method so that it could
+display you message. In that case you could pass your message by using a parameter.
+
+Now in order to pass in the message as a parameter to the above method we make some modifications to above code
+
+public void displayMessage(String message){
+
+    System.out.println("Hello");
+}
+
+as you could see, we have now added String message to the above code
+this is called as passing a parameter, in this case we have passed a parameter which is message
+which is of the type String to the method called display message.
+
+Can we pass multiple parameters to a method??
+Well, of course you can
+
+Lets say you want to pass in two parameters to a method, in that case we modify the above
+code as:
+
+public void displayMessage(String message1,String message 2){
+
+    System.out.println("Hello");
+}
+
+You could keep on adding as many parameters to a method as you want by simply using a comma.
+
+
+
+USING MULTIPLE METHOD IN A SINGLE CLASS
+You could also add multiple methods to a single class in java.
+
+Example: Lets say you have a class called student.
+You have a main method inside a class which looks something like this
+
+public static void main(String args[])
+{
+
+}
+
+And your entire code looks something like
+class student{
+    public static void main(String args[])
+    {  }
+}
+
+Now you could go ahead and add in another method apart from the main method. lets say you want to add a new method called as print
+
+so we go inside the class but outside the main method and type in
+
+private static void print(){
+
+}
+
+so your entire code should look like
+class student{
+    public static void main(String args[])
+    {
+
+    }
+
+    private static void print()
+    {
+
+    }
+
+}
+
+So there you have it, multiple methods inside the same class. Also note that you could add as many methods as you want in a single class.
